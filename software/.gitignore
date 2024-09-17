@@ -5,5 +5,6 @@ __pycache__/
 
 *.npz
 *.jpg
+*.png 
 
-/camera_calibration
+/cv/camera_calibration
