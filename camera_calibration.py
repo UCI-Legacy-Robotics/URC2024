@@ -137,6 +137,9 @@ def calibrate_camera_automatically(chessboard_size=(7, 7), square_size=0.025, nu
         return None, None
     
 if __name__ == "__main__":
+    # Try it out with your camera
+    # https://docs.google.com/document/d/1rQ3AZy0SDpwVrDDpD3DV0ex3aigPQI0lMzyPGNGv5ug/edit?usp=sharing
+    # Print and stick onto a flat, stiff surface like a binder or clipboard
     calibrate_camera_automatically(chessboard_size=(7,7),square_size=0.025,num_images=10, save_images=True) 
 
 
