@@ -42,55 +42,62 @@ def calibrate_camera_automatically(chessboard_size=(7, 7), square_size=0.025, nu
         return None, None
 
     images_captured = 0
-    print("Starting automated camera calibration...")
+    print("Starting camera calibration...")
     print(f"Number of images to capture: {num_images}")
     print("Ensure the chessboard pattern is visible to the camera.")
+    print("Press Enter to capture an image when the chessboard is visible.")
+    print("Press 'q' to exit the calibration process.")
 
     while images_captured < num_images:
         ret, frame = cap.read()
         if not ret:
             print("Warning: Failed to read frame from camera.")
             continue
-
         gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
         # Find the chessboard corners
-        ret, corners = cv.findChessboardCorners(gray, chessboard_size, None)
+        corner_ret, corners = cv.findChessboardCorners(gray, chessboard_size, None)
 
-        if ret:
+        if corner_ret:
             # Refine corner locations
             corners2 = cv.cornerSubPix(gray, corners, (11, 11), (-1, -1), criteria)
+            
+            # Draw corners
+            cv.drawChessboardCorners(frame, chessboard_size, corners2, corner_ret)
+
+
+        cv.imshow('Calibration', frame)
+        key = cv.waitKey(1) & 0xFF
+
+        if key == ord('q'):
+            break
+
+        elif key == 13: # Enter
+            if not corner_ret:
+                print("Chessboard not detected in the frame. Please adjust and try again.")
+
+                cv.putText(frame, "Chessboard not detected. Try again.",
+                            (10, frame.shape[0] - 30), cv.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
+                cv.imshow('Calibration', frame)
+                continue
 
             # Append object points and image points
             objpoints.append(objp)
             imgpoints.append(corners2)
-
-            # Draw and display the corners
-            cv.drawChessboardCorners(frame, chessboard_size, corners2, ret)
-
             images_captured += 1
             print(f"Captured image {images_captured}/{num_images}")
 
             # Display number of images captured on the frame
             cv.putText(frame, f"Images Captured: {images_captured}/{num_images}",
-                       (10, 30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv.LINE_AA)
+                        (10, 30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv.LINE_AA)
 
             # Save the captured images
-            frames.append(frame)
+            frames.append(frame.copy())
 
-            # Pause briefly to allow user to move the chessboard
-            cv.imshow('Calibration', frame)
-            cv.waitKey(500)
-        else:
-            # Display the frame with a message
-            cv.putText(frame, "Chessboard not detected. Adjust the position.",
-                       (10, 30), cv.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2, cv.LINE_AA)
-            cv.imshow('Calibration', frame)
+            # # Show the frame with the corners drawn
+            # cv.imshow('Calibration', frame)
+            # cv.waitKey(500)
 
-        # Allow the user to exit early by pressing 'q'
-        if cv.waitKey(1) & 0xFF == ord('q'):
-            print("Calibration process terminated by user.")
-            break
 
     cap.release()
     cv.destroyAllWindows()
@@ -100,8 +107,10 @@ def calibrate_camera_automatically(chessboard_size=(7, 7), square_size=0.025, nu
         ret, camera_matrix, dist_coeffs, rvecs, tvecs = cv.calibrateCamera(
             objpoints, imgpoints, gray.shape[::-1], None, None)
 
+        os.makedirs('camera_calibration', exist_ok=True)
+
         # Save calibration data for future use
-        np.savez('calibration_data.npz', camera_matrix=camera_matrix, dist_coeffs=dist_coeffs,
+        np.savez('camera_calibration/calibration_data.npz', camera_matrix=camera_matrix, dist_coeffs=dist_coeffs,
                  objpoints=objpoints, imgpoints=imgpoints, rvecs=rvecs, tvecs=tvecs)
 
         print("Camera calibrated successfully.")
