@@ -18,8 +18,8 @@ def undistort_and_save_images(frames, camera_matrix, dist_coeffs, objpoints, img
     """
     if save_images:
         # Create directories to save images
-        os.makedirs('images/calibration', exist_ok=True)
-        os.makedirs('images/undistorted', exist_ok=True)
+        os.makedirs('camera_calibration/calibration_images', exist_ok=True)
+        os.makedirs('camera_calibration/undistorted_images', exist_ok=True)
 
     # Initialize variables to compute total error
     total_error = 0
@@ -40,8 +40,8 @@ def undistort_and_save_images(frames, camera_matrix, dist_coeffs, objpoints, img
 
         if save_images:
             # Save original and undistorted images
-            cv.imwrite(f'images/calibration/image_{i+1}.png', img)
-            cv.imwrite(f'images/undistorted/image_{i+1}.png', undistorted_img)
+            cv.imwrite(f'camera_calibration/calibration_images/image_{i+1}.png', img)
+            cv.imwrite(f'camera_calibration/undistorted_images/image_{i+1}.png', undistorted_img)
 
         # Compute re-projection error
         imgpoints2, _ = cv.projectPoints(objpoints[i], rvecs[i], tvecs[i], camera_matrix, dist_coeffs)
@@ -51,4 +51,8 @@ def undistort_and_save_images(frames, camera_matrix, dist_coeffs, objpoints, img
     # Compute mean error
     mean_error = total_error / len(objpoints)
     print(f"\nTotal Re-projection Error: {mean_error}")
+    
+    with open('camera_calibration/reprojection_error.txt', 'w') as f:
+        f.write(f"Total Re-projection Error: {mean_error}")
+    
     return mean_error
