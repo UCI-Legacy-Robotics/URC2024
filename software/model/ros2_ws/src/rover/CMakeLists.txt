@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(arm_assy)
+project(rover)
 
 find_package(ament_cmake REQUIRED)
 

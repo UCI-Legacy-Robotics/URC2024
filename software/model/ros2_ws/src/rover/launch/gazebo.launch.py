@@ -7,11 +7,11 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_arm_assy = get_package_share_directory('arm_assy')
+    pkg_arm_assy = get_package_share_directory('rover')
     default_urdf_path = PathJoinSubstitution([
         pkg_arm_assy,
         'urdf',
-        'Arm_Final_PLease.urdf'
+        'rover.urdf'
     ])
     urdf_file_arg = DeclareLaunchArgument(
         name='urdf_file',
@@ -33,7 +33,7 @@ def generate_launch_description():
         executable='create',
         arguments=[
             '-file', LaunchConfiguration('urdf_file'),
-            '-name', 'arm_assy',
+            '-name', 'rover',
             '-x', '0',
             '-y', '0',
             '-z', '0.5'
