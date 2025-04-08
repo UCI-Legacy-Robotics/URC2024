@@ -277,6 +277,17 @@
     <limit lower="-3.1416" upper="3.1416" effort="100" velocity="1"/>
   </joint>
 
+  <transmission name="revolute_platform">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="platform">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+      <actuator name="platform_revolute_joint_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
   <link name="link2">
     <inertial>
       <origin xyz="2.4980018054066E-16 0.230816958012735 -0.0127023574199277" rpy="0 0 0"/>
@@ -432,5 +443,35 @@
     <limit lower="-0.1425" upper="0" effort="100" velocity="1"/>
   </joint>
 
-</robot>
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="base">
+      <command_interface name="velocity" />
+      <state_interface name="velocity" />
+      <state_interface name="position" />
+    </joint>
+  </ros2_control>
 
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <!-- Arm Joints -->
+    <joint name="platform">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find rover)/config/arm.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>
