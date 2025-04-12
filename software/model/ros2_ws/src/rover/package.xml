@@ -1,18 +1,18 @@
-<package format="2">
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>rover</name>
-  <version>1.0.0</version>
-  <description>
-    <p>URDF Description package for Legacy Rover</p>
-  </description>
-  <author>LegacySoftware</author>
-  <maintainer email="LegacySoftware@gmail.com"/>
-  <license>BSD</license>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="spaloma.v1@gmail.com">vel</maintainer>
+  <license>BSD-3-Clause</license>
+
   <buildtool_depend>ament_cmake</buildtool_depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
-    <gazebo_ros gazebo_model_path = "../../ros2_ws/install/rover/share/"/>
-    <architecture_independent />
   </export>
 </package>

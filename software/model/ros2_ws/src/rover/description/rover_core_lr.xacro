@@ -1,28 +1,36 @@
 <?xml version="1.0"?>
-<!--
-  URDF for Arm_Final_PLease with a support base and 6 actuated wheels.
-  Wheels are placed along the long sides (x-axis) at y = ±0.35 and are connected with continuous joints.
-  The wheel geometry is rotated so that it rolls about the y-axis.
--->
-<robot name="rover">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Define materials -->
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="arm_gray">
+    <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1"/>
+  </material>
 
   <!-- Define the support base as a new link -->
-  <link name="base_support">
+  <link name="chassis">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <!-- Visual dimensions of the support (can be adjusted as needed) -->
-        <box size="0.85 0.7 0.3"/>
+        <box size="0.704 0.46 0.216"/>
       </geometry>
-      <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
-      </material>
+      <material name="blue"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <!-- Collision box: using 1.3m x 0.7m x 0.1m dimensions -->
-        <box size="1.3 0.7 0.1"/>
+        <box size="0.704 0.46 0.216"/>
       </geometry>
     </collision>
     <inertial>
@@ -32,17 +40,16 @@
     </inertial>
   </link>
 
-  <!-- Define six wheel links (actuated wheels) -->
-  <!-- Each wheel is modeled as a cylinder with its visual and collision geometry rotated so that its axis aligns with the wheel rotation -->
+  <!-- Define four wheel links (actuated wheels) -->
+  <!-- Now front_left is actually rear_left, front_right is rear_right -->
+  <!-- And rear_left is front_left, rear_right is front_right -->
   <link name="wheel_front_left">
     <visual>
       <origin xyz="0 0 0" rpy="1.5708 0 0"/>
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="1.5708 0 0"/>
@@ -63,55 +70,7 @@
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.1" length="0.05"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
-      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
-    </inertial>
-  </link>
-
-  <link name="wheel_mid_left">
-    <visual>
-      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.1" length="0.05"/>
-      </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.1" length="0.05"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
-      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
-    </inertial>
-  </link>
-
-  <link name="wheel_mid_right">
-    <visual>
-      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.1" length="0.05"/>
-      </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="1.5708 0 0"/>
@@ -132,9 +91,7 @@
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="1.5708 0 0"/>
@@ -155,9 +112,7 @@
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="1.5708 0 0"/>
@@ -173,53 +128,33 @@
   </link>
 
   <!-- Joints for attaching each wheel to the support base -->
-  <!-- Wheels are attached along the long sides at y = ±0.35.
-       The x positions (0.65, 0, -0.65) distribute them evenly along the 1.3m length.
-       The joint axis is set to 0 1 0 so that the wheel rotates about the y‑axis. -->
+  <!-- Rotated wheel positions: front becomes rear and rear becomes front -->
   <joint name="wheel_front_left_joint" type="continuous">
-    <parent link="base_support"/>
+    <parent link="chassis"/>
     <child link="wheel_front_left"/>
-    <origin xyz="0.55 0.40 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.25 0.30 -0.05" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
   </joint>
+  
   <joint name="wheel_front_right_joint" type="continuous">
-    <parent link="base_support"/>
+    <parent link="chassis"/>
     <child link="wheel_front_right"/>
-    <origin xyz="0.55 -0.40 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.25 -0.30 -0.05" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
   </joint>
-  <joint name="wheel_mid_left_joint" type="continuous">
-    <parent link="base_support"/>
-    <child link="wheel_mid_left"/>
-    <origin xyz="0 0.40 -0.05" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-  </joint>
-  <joint name="wheel_mid_right_joint" type="continuous">
-    <parent link="base_support"/>
-    <child link="wheel_mid_right"/>
-    <origin xyz="0 -0.40 -0.05" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-  </joint>
+  
   <joint name="wheel_rear_left_joint" type="continuous">
-    <parent link="base_support"/>
+    <parent link="chassis"/>
     <child link="wheel_rear_left"/>
-    <origin xyz="-0.55 0.40 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.25 0.30 -0.05" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
   </joint>
+  
   <joint name="wheel_rear_right_joint" type="continuous">
-    <parent link="base_support"/>
+    <parent link="chassis"/>
     <child link="wheel_rear_right"/>
-    <origin xyz="-0.55 -0.40 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.25 -0.30 -0.05" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-  </joint>
-
-  <!-- Attach the arm's base (base_link) to the support with a fixed joint.
-       The origin offset (0.0635, -0.0635, 0.05) compensates for the base_link inertial offset,
-       centering the arm on the support base. -->
-  <joint name="base_mount" type="fixed">
-    <parent link="base_support"/>
-    <child link="base_link"/>
-    <origin xyz="0.0635 -0.0635 0.05" rpy="0 0 0"/>
   </joint>
 
   <!-- Arm's URDF as previously defined -->
@@ -234,9 +169,7 @@
       <geometry>
         <mesh filename="../meshes/base_link.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
-      </material>
+      <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -245,6 +178,13 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- Attach the arm's base (base_link) to the support with a fixed joint -->
+  <joint name="base_mount" type="fixed">
+    <parent link="chassis"/>
+    <child link="base_link"/>
+    <origin xyz="0.0635 -0.0635 0.15" rpy="0 0 0"/>
+  </joint>
 
   <link name="link1">
     <inertial>
@@ -257,9 +197,7 @@
       <geometry>
         <mesh filename="../meshes/link1.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
-      </material>
+      <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -288,9 +226,7 @@
       <geometry>
         <mesh filename="../meshes/link2.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
-      </material>
+      <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -319,9 +255,7 @@
       <geometry>
         <mesh filename="../meshes/link3.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
-      </material>
+      <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -350,9 +284,7 @@
       <geometry>
         <mesh filename="../meshes/wrist_link.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
-      </material>
+      <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -381,9 +313,7 @@
       <geometry>
         <mesh filename="../meshes/manipulator.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1"/>
-      </material>
+      <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -412,14 +342,12 @@
       <geometry>
         <mesh filename="../meshes/claw.STL"/>
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1"/>
-      </material>
+      <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-	      <mesh filename="../meshes/claw.STL"/>
+        <mesh filename="../meshes/claw.STL"/>
       </geometry>
     </collision>
   </link>
@@ -432,5 +360,131 @@
     <limit lower="-0.1425" upper="0" effort="100" velocity="1"/>
   </joint>
 
-</robot>
+  <!-- ROS2 Control Integration -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    
+    <!-- Arm Joint Control -->
+    <joint name="platform">
+      <command_interface name="position">
+        <param name="min">-3.1416</param>
+        <param name="max">3.1416</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="linkage1">
+      <command_interface name="position">
+        <param name="min">-3.1416</param>
+        <param name="max">3.1416</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="linkage3">
+      <command_interface name="position">
+        <param name="min">-3.1416</param>
+        <param name="max">3.1416</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="wrist">
+      <command_interface name="position">
+        <param name="min">-3.1416</param>
+        <param name="max">3.1416</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="manipulator_wrist">
+      <command_interface name="position">
+        <param name="min">-3.1416</param>
+        <param name="max">3.1416</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="top_claw">
+      <command_interface name="position">
+        <param name="min">-0.1425</param>
+        <param name="max">0</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <!-- Wheel Control -->
+    <joint name="wheel_front_left_joint">
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="wheel_front_right_joint">
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="wheel_rear_left_joint">
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    
+    <joint name="wheel_rear_right_joint">
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
 
+  <!-- Gazebo plugin for ROS 2 control -->
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>$(find rover)/config/controller_config.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <!-- Add Gazebo colors for visualization -->
+  <gazebo reference="chassis">
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <gazebo reference="wheel_front_left">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="wheel_front_right">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="wheel_rear_left">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="wheel_rear_right">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+</robot>
