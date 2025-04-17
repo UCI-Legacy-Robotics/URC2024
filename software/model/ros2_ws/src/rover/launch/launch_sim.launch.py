@@ -22,12 +22,18 @@ def generate_launch_description():
 
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-             )
+                    get_package_share_directory('ros_gz_sim'), 'launch', 'ros_gz_sim.launch.py')]), 
+                    launch_arguments={
+                        'bridge_name': 'ros_gz_bridge',
+                        'config_file': '/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/config/bridge_config.yaml',
+                        'world_sdf_file': 'empty.sdf'
+                    }.items(), 
+    )
 
-    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
-                        arguments=['-topic', 'rover_description',
-                                   '-entity', 'my_bot'],
+    spawn_entity = Node(package='ros_gz_sim', executable='create',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'my_bot',
+                                   '-world', 'empty'],
                         output='screen')
 
     load_joint_state_broadcaster = ExecuteProcess(
