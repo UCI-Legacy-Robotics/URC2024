@@ -1,0 +1,76 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 # Hz
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    arm_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    mobile_base_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_position_controller:
+  ros__parameters:
+    joints:
+      - platform
+      - linkage1
+      - linkage3
+      - wrist
+      - manipulator_wrist
+      - top_claw
+    interface_name: position
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - platform
+      - linkage1
+      - linkage3
+      - wrist
+      - manipulator_wrist
+      - top_claw
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+mobile_base_controller:
+  ros__parameters:
+    joints:
+      - wheel_front_left_joint
+      - wheel_front_right_joint
+      - wheel_rear_left_joint
+      - wheel_rear_right_joint
+    interface_name: velocity
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+
+    # Additional configuration for differential drive behavior
+    wheel_separation_x: 1.1
+    wheel_separation_y: 0.8
+    wheel_radius: 0.1
+
+    # Controller gains
+    publish_rate: 50.0
+    cmd_vel_timeout: 0.5
+
+    # Velocity limits
+    linear.x.max_velocity: 1.0
+    linear.x.min_velocity: -1.0
+    linear.x.max_acceleration: 1.0
+    linear.x.min_acceleration: -1.0
+
+    angular.z.max_velocity: 1.0
+    angular.z.min_velocity: -1.0
+    angular.z.max_acceleration: 1.0
+    angular.z.min_acceleration: -1.0

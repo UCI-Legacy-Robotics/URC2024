@@ -1,0 +1,164 @@
+[0.000000] (-) TimerEvent: {}
+[0.000244] (rover) JobQueued: {'identifier': 'rover', 'dependencies': OrderedDict()}
+[0.000274] (rover) JobStarted: {'identifier': 'rover'}
+[0.006929] (rover) JobProgress: {'identifier': 'rover', 'progress': 'cmake'}
+[0.008152] (rover) Command: {'cmd': ['/usr/bin/cmake', '/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover', '-DCMAKE_INSTALL_PREFIX=/home/aagrawal05/URC2024/software/model/install/rover'], 'cwd': '/home/aagrawal05/URC2024/software/model/build/rover', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'MESA_D3D12_DEFAULT_ADAPTER_NAME': 'NVIDIA', 'USER': 'aagrawal05', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/aagrawal05', 'OLDPWD': '/home/aagrawal05/URC2024', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aagrawal05', 'NAME': 'ADITYA-PC', 'WSL_INTEROP': '/run/WSL/42038_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Alacritty/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/ZeroTier/One/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/adity/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adity/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/Neovim/bin:/mnt/c/Users/adity/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '09c66d4a-0c81-4e63-b614-1b17d9be5838', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/aagrawal05/URC2024/software/model/build/rover', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.099319] (-) TimerEvent: {}
+[0.199941] (-) TimerEvent: {}
+[0.300558] (-) TimerEvent: {}
+[0.401356] (-) TimerEvent: {}
+[0.501895] (-) TimerEvent: {}
+[0.602651] (-) TimerEvent: {}
+[0.650290] (rover) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.703059] (-) TimerEvent: {}
+[0.803764] (-) TimerEvent: {}
+[0.904369] (-) TimerEvent: {}
+[1.005169] (-) TimerEvent: {}
+[1.105882] (-) TimerEvent: {}
+[1.206637] (-) TimerEvent: {}
+[1.307226] (-) TimerEvent: {}
+[1.407623] (-) TimerEvent: {}
+[1.508174] (-) TimerEvent: {}
+[1.609005] (-) TimerEvent: {}
+[1.709737] (-) TimerEvent: {}
+[1.810364] (-) TimerEvent: {}
+[1.910965] (-) TimerEvent: {}
+[2.011474] (-) TimerEvent: {}
+[2.112323] (-) TimerEvent: {}
+[2.212970] (-) TimerEvent: {}
+[2.313681] (-) TimerEvent: {}
+[2.414087] (-) TimerEvent: {}
+[2.514755] (-) TimerEvent: {}
+[2.615442] (-) TimerEvent: {}
+[2.715804] (-) TimerEvent: {}
+[2.816428] (-) TimerEvent: {}
+[2.917064] (-) TimerEvent: {}
+[3.017688] (-) TimerEvent: {}
+[3.118376] (-) TimerEvent: {}
+[3.219260] (-) TimerEvent: {}
+[3.319900] (-) TimerEvent: {}
+[3.420489] (-) TimerEvent: {}
+[3.520945] (-) TimerEvent: {}
+[3.621293] (-) TimerEvent: {}
+[3.721870] (-) TimerEvent: {}
+[3.822518] (-) TimerEvent: {}
+[3.923118] (-) TimerEvent: {}
+[4.023688] (-) TimerEvent: {}
+[4.124336] (-) TimerEvent: {}
+[4.200991] (rover) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[4.224741] (-) TimerEvent: {}
+[4.325172] (-) TimerEvent: {}
+[4.425711] (-) TimerEvent: {}
+[4.526406] (-) TimerEvent: {}
+[4.627135] (-) TimerEvent: {}
+[4.728010] (-) TimerEvent: {}
+[4.828785] (-) TimerEvent: {}
+[4.929079] (-) TimerEvent: {}
+[5.029433] (-) TimerEvent: {}
+[5.130012] (-) TimerEvent: {}
+[5.230752] (-) TimerEvent: {}
+[5.331303] (-) TimerEvent: {}
+[5.431743] (-) TimerEvent: {}
+[5.532524] (-) TimerEvent: {}
+[5.633188] (-) TimerEvent: {}
+[5.734123] (-) TimerEvent: {}
+[5.835044] (-) TimerEvent: {}
+[5.935680] (-) TimerEvent: {}
+[6.036027] (-) TimerEvent: {}
+[6.136768] (-) TimerEvent: {}
+[6.237350] (-) TimerEvent: {}
+[6.337858] (-) TimerEvent: {}
+[6.438554] (-) TimerEvent: {}
+[6.539066] (-) TimerEvent: {}
+[6.639728] (-) TimerEvent: {}
+[6.740409] (-) TimerEvent: {}
+[6.757075] (rover) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[6.840573] (-) TimerEvent: {}
+[6.940956] (-) TimerEvent: {}
+[7.041505] (-) TimerEvent: {}
+[7.141958] (-) TimerEvent: {}
+[7.242354] (-) TimerEvent: {}
+[7.343254] (-) TimerEvent: {}
+[7.443795] (-) TimerEvent: {}
+[7.523859] (rover) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.534031] (rover) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[7.536138] (rover) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.536899] (rover) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.544059] (-) TimerEvent: {}
+[7.644577] (-) TimerEvent: {}
+[7.745120] (-) TimerEvent: {}
+[7.845797] (-) TimerEvent: {}
+[7.911403] (rover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.946334] (-) TimerEvent: {}
+[8.047154] (-) TimerEvent: {}
+[8.148125] (-) TimerEvent: {}
+[8.248933] (-) TimerEvent: {}
+[8.349517] (-) TimerEvent: {}
+[8.450056] (-) TimerEvent: {}
+[8.550708] (-) TimerEvent: {}
+[8.651280] (-) TimerEvent: {}
+[8.751937] (-) TimerEvent: {}
+[8.852549] (-) TimerEvent: {}
+[8.953177] (-) TimerEvent: {}
+[9.053770] (-) TimerEvent: {}
+[9.066201] (rover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[9.074298] (rover) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[9.074576] (rover) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[9.074816] (rover) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[9.098865] (rover) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[9.153942] (-) TimerEvent: {}
+[9.229496] (rover) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[9.254312] (-) TimerEvent: {}
+[9.353345] (rover) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[9.354447] (-) TimerEvent: {}
+[9.454800] (-) TimerEvent: {}
+[9.478697] (rover) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[9.478884] (rover) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[9.480228] (rover) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.481351] (rover) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[9.483174] (rover) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.485144] (rover) StdoutLine: {'line': b'-- Configuring done (9.5s)\n'}
+[9.489701] (rover) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[9.491280] (rover) StdoutLine: {'line': b'-- Build files have been written to: /home/aagrawal05/URC2024/software/model/build/rover\n'}
+[9.495496] (rover) CommandEnded: {'returncode': 0}
+[9.496058] (rover) JobProgress: {'identifier': 'rover', 'progress': 'build'}
+[9.496845] (rover) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aagrawal05/URC2024/software/model/build/rover', '--', '-j20', '-l20'], 'cwd': '/home/aagrawal05/URC2024/software/model/build/rover', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'MESA_D3D12_DEFAULT_ADAPTER_NAME': 'NVIDIA', 'USER': 'aagrawal05', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/aagrawal05', 'OLDPWD': '/home/aagrawal05/URC2024', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aagrawal05', 'NAME': 'ADITYA-PC', 'WSL_INTEROP': '/run/WSL/42038_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Alacritty/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/ZeroTier/One/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/adity/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adity/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/Neovim/bin:/mnt/c/Users/adity/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '09c66d4a-0c81-4e63-b614-1b17d9be5838', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/aagrawal05/URC2024/software/model/build/rover', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[9.527430] (rover) CommandEnded: {'returncode': 0}
+[9.527748] (rover) JobProgress: {'identifier': 'rover', 'progress': 'install'}
+[9.534096] (rover) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aagrawal05/URC2024/software/model/build/rover'], 'cwd': '/home/aagrawal05/URC2024/software/model/build/rover', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'MESA_D3D12_DEFAULT_ADAPTER_NAME': 'NVIDIA', 'USER': 'aagrawal05', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/aagrawal05', 'OLDPWD': '/home/aagrawal05/URC2024', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aagrawal05', 'NAME': 'ADITYA-PC', 'WSL_INTEROP': '/run/WSL/42038_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Alacritty/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/ZeroTier/One/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/adity/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adity/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/Neovim/bin:/mnt/c/Users/adity/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '09c66d4a-0c81-4e63-b614-1b17d9be5838', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/aagrawal05/URC2024/software/model/build/rover', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[9.539907] (rover) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.540058] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch\n'}
+[9.540647] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/launch_sim.launch.py\n'}
+[9.540869] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/rsp.launch.py\n'}
+[9.541319] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/rviz.launch.py\n'}
+[9.541398] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/control.launch.py\n'}
+[9.541443] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description\n'}
+[9.541678] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/rover.urdf.xacro\n'}
+[9.541758] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/gazebo_control.xacro\n'}
+[9.541801] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/rover_core_lr.xacro\n'}
+[9.541903] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/inertial_macros.xacro\n'}
+[9.542139] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config\n'}
+[9.542318] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config/bridge_config.yaml\n'}
+[9.542373] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config/controller_position.yaml\n'}
+[9.542423] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/rviz\n'}
+[9.542590] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/rviz/default.rviz\n'}
+[9.542897] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/lib/rover/control.py\n'}
+[9.543252] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/package_run_dependencies/rover\n'}
+[9.543460] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/parent_prefix_path/rover\n'}
+[9.543643] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/ament_prefix_path.sh\n'}
+[9.543785] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/ament_prefix_path.dsv\n'}
+[9.544092] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/path.sh\n'}
+[9.544210] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/path.dsv\n'}
+[9.544276] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.bash\n'}
+[9.544348] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.sh\n'}
+[9.544462] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.zsh\n'}
+[9.544590] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.dsv\n'}
+[9.544775] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/package.dsv\n'}
+[9.545634] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/packages/rover\n'}
+[9.546226] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/cmake/roverConfig.cmake\n'}
+[9.546343] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/cmake/roverConfig-version.cmake\n'}
+[9.546453] (rover) StdoutLine: {'line': b'-- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/package.xml\n'}
+[9.548173] (rover) CommandEnded: {'returncode': 0}
+[9.555696] (-) TimerEvent: {}
+[9.562346] (rover) JobEnded: {'identifier': 'rover', 'rc': 0}
+[9.563010] (-) EventReactorShutdown: {}

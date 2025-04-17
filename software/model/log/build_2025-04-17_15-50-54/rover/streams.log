@@ -1,0 +1,61 @@
+[0.009s] Invoking command in '/home/aagrawal05/URC2024/software/model/build/rover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aagrawal05/URC2024/software/model/ros2_ws/src/rover -DCMAKE_INSTALL_PREFIX=/home/aagrawal05/URC2024/software/model/install/rover
+[0.650s] -- The C compiler identification is GNU 13.3.0
+[4.201s] -- The CXX compiler identification is GNU 13.3.0
+[6.757s] -- Detecting C compiler ABI info
+[7.524s] -- Detecting C compiler ABI info - done
+[7.534s] -- Check for working C compiler: /usr/bin/cc - skipped
+[7.536s] -- Detecting C compile features
+[7.537s] -- Detecting C compile features - done
+[7.911s] -- Detecting CXX compiler ABI info
+[9.066s] -- Detecting CXX compiler ABI info - done
+[9.074s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[9.074s] -- Detecting CXX compile features
+[9.075s] -- Detecting CXX compile features - done
+[9.099s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[9.229s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[9.353s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[9.479s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.479s] -- Configured 'flake8' exclude dirs and/or files: 
+[9.480s] -- Added test 'lint_cmake' to check CMake code style
+[9.481s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.483s] -- Added test 'xmllint' to check XML markup files
+[9.485s] -- Configuring done (9.5s)
+[9.490s] -- Generating done (0.0s)
+[9.491s] -- Build files have been written to: /home/aagrawal05/URC2024/software/model/build/rover
+[9.495s] Invoked command in '/home/aagrawal05/URC2024/software/model/build/rover' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aagrawal05/URC2024/software/model/ros2_ws/src/rover -DCMAKE_INSTALL_PREFIX=/home/aagrawal05/URC2024/software/model/install/rover
+[9.497s] Invoking command in '/home/aagrawal05/URC2024/software/model/build/rover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aagrawal05/URC2024/software/model/build/rover -- -j20 -l20
+[9.527s] Invoked command in '/home/aagrawal05/URC2024/software/model/build/rover' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aagrawal05/URC2024/software/model/build/rover -- -j20 -l20
+[9.534s] Invoking command in '/home/aagrawal05/URC2024/software/model/build/rover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aagrawal05/URC2024/software/model/build/rover
+[9.540s] -- Install configuration: ""
+[9.540s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch
+[9.540s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/launch_sim.launch.py
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/rsp.launch.py
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/rviz.launch.py
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/launch/control.launch.py
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/rover.urdf.xacro
+[9.541s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/gazebo_control.xacro
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/rover_core_lr.xacro
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/description/inertial_macros.xacro
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config/bridge_config.yaml
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/config/controller_position.yaml
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/rviz
+[9.542s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/rviz/default.rviz
+[9.543s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/lib/rover/control.py
+[9.543s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/package_run_dependencies/rover
+[9.543s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/parent_prefix_path/rover
+[9.543s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/ament_prefix_path.sh
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/ament_prefix_path.dsv
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/path.sh
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/environment/path.dsv
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.bash
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.sh
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.zsh
+[9.544s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/local_setup.dsv
+[9.545s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/package.dsv
+[9.545s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/ament_index/resource_index/packages/rover
+[9.546s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/cmake/roverConfig.cmake
+[9.546s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/cmake/roverConfig-version.cmake
+[9.546s] -- Installing: /home/aagrawal05/URC2024/software/model/install/rover/share/rover/package.xml
+[9.548s] Invoked command in '/home/aagrawal05/URC2024/software/model/build/rover' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aagrawal05/URC2024/software/model/build/rover

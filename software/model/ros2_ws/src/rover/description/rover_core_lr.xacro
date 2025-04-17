@@ -167,14 +167,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/base_link.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/base_link.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -195,14 +195,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link1.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link1.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -224,14 +224,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link2.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link2.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -253,14 +253,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link3.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/link3.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
       </geometry>
     </collision>
   </link>
@@ -282,14 +282,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/wrist_link.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/wrist_link.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -311,14 +311,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/manipulator.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/manipulator.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
       </geometry>
     </collision>
   </link>
@@ -340,14 +340,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/claw.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="../meshes/claw.STL"/>
+        <mesh filename="/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
       </geometry>
     </collision>
   </link>
@@ -363,7 +363,7 @@
   <!-- ROS2 Control Integration -->
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+      <plugin>gz_ros2_control/GazeboSystem</plugin>
     </hardware>
     
     <!-- Arm Joint Control -->
@@ -463,7 +463,7 @@
   <gazebo>
     <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
     <!-- <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so"> -->
-      <parameters>$(find rover)/config/controller_config.yaml</parameters>
+        <parameters>/home/aagrawal05/URC2024/software/model/ros2_ws/src/rover/config/controller_position.yaml</parameters>
     </plugin>
   </gazebo>
 
@@ -485,7 +485,7 @@
   </gazebo>
 
   <gazebo reference="wheel_rear_right">
-    <material>Gazebo/Black</material>
+    j<material>Gazebo/Black</material>
   </gazebo>
 
 </robot>
