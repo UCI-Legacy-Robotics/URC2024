@@ -1,9 +1,0 @@
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/uninstall.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/rover_uninstall.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/test.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/edit_cache.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/rebuild_cache.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/list_install_components.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/install.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/install/local.dir
-/home/spalo/URC2024/software/model/build/rover/CMakeFiles/install/strip.dir

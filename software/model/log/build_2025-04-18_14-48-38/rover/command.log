@@ -1,4 +1,0 @@
-Invoking command in '/home/spalo/URC2024/software/model/build/rover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/spalo/URC2024/software/model/build/rover -- -j12 -l12
-Invoked command in '/home/spalo/URC2024/software/model/build/rover' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/spalo/URC2024/software/model/build/rover -- -j12 -l12
-Invoking command in '/home/spalo/URC2024/software/model/build/rover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/spalo/URC2024/software/model/build/rover
-Invoked command in '/home/spalo/URC2024/software/model/build/rover' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/spalo/URC2024/software/model/build/rover
