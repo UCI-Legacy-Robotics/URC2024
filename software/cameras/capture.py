@@ -1,5 +1,6 @@
 import pyzed.sl as sl
 import os
+from panorama import capture_panorama, stitch_panorama
 
 def capture_single_image():
     # Create the "captured" folder if it doesn't exist
@@ -32,6 +33,17 @@ def capture_single_image():
     # Close the camera
     zed.close()
 
+def create_panorama(num_images=5, delay=1):
+    """Main function to capture images and create a panorama"""
+    if capture_panorama(num_images, delay):
+        if stitch_panorama():
+            print("Panorama creation successful!")
+        else:
+            print("Failed to stitch panorama.")
+    else:
+        print("Failed to capture images for panorama.")
+
 
 if __name__ == "__main__":
     capture_single_image()
+    create_panorama(5, 1)
