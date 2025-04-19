@@ -14,7 +14,7 @@ class ArmActionClient(Node):
         super().__init__('arm_control_actionclient')
         self._action_client = ActionClient(self, FollowJointTrajectory, '/joint_trajectory_controller/follow_joint_trajectory')
 
-    def send_goal(self, angle1):
+    def send_goal(self, angle1, angle2, angle3, angle4, angle5, angle6):
         goal_msg = FollowJointTrajectory.Goal()
 
         joint_names = ["platform", "linkage1", "linkage3", "wrist", "manipulator_wrist", "top_claw"]
@@ -22,7 +22,7 @@ class ArmActionClient(Node):
         points = []
         point = JointTrajectoryPoint()
         point.time_from_start = Duration(seconds=1, nanoseconds=0).to_msg()
-        point.positions = [angle1, angle1, angle1, angle1, angle1, angle1]
+        point.positions = [angle1, angle2, angle3, angle4, angle5, angle6]
 
         points.append(point)
 
@@ -63,8 +63,13 @@ def main(args=None):
     action_client = ArmActionClient()
 
     angle1 = float(sys.argv[1])
+    angle2 = float(sys.argv[2])
+    angle3 = float(sys.argv[3])
+    angle4 = float(sys.argv[4])
+    angle5 = float(sys.argv[5])
+    angle6 = float(sys.argv[6])
 
-    future = action_client.send_goal(angle1)
+    future = action_client.send_goal(angle1, angle2, angle3, angle4, angle5, angle6)
 
     rclpy.spin(action_client)
 
