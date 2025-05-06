@@ -8,3 +8,7 @@ __pycache__/
 *.png 
 
 /cv/camera_calibration
+/science/ros2_ws/log
+/science/ros2_ws/build
+/science/ros2_ws/install
+/science/ros2_ws/src/tutorial_interfaces/build
