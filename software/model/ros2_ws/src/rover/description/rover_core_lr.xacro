@@ -167,14 +167,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -195,14 +195,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -224,14 +224,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -253,14 +253,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
       </geometry>
       <material name="arm_gray"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/link3.STL"/>
       </geometry>
     </collision>
   </link>
@@ -282,14 +282,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/wrist_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -311,14 +311,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/manipulator.STL"/>
       </geometry>
     </collision>
   </link>
@@ -340,14 +340,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="/home/spalo/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
+        <mesh filename="/home/brandon/URC2024/software/model/ros2_ws/src/rover/meshes/claw.STL"/>
       </geometry>
     </collision>
   </link>
