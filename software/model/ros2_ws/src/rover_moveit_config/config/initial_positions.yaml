@@ -1,0 +1,9 @@
+# Default initial positions for robot's ros2_control fake system
+
+initial_positions:
+  linkage1: 0
+  linkage3: 0
+  manipulator_wrist: 0
+  platform: 0
+  top_claw: 0
+  wrist: 0

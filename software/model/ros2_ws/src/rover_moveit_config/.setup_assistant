@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: rover
+    relative_path: description/rover.urdf.xacro
+  srdf:
+    relative_path: config/robot.srdf
+  package_settings:
+    author_name: Brandon Lichter
+    author_email: brandotl@icloud.com
+    generated_timestamp: 1747431281
