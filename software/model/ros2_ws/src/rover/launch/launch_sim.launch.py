@@ -46,6 +46,17 @@ def generate_launch_description():
              'joint_trajectory_controller'],
         output='screen'
     )
+
+    moveit_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(
+                get_package_share_directory('rover_moveit_config'),
+                'launch',
+                'move_group.launch.py'
+            )
+        ]),
+        launch_arguments={'use_sim_time': 'true'}.items()
+    )
 	
     return LaunchDescription([
         RegisterEventHandler(
@@ -63,4 +74,5 @@ def generate_launch_description():
         rsp,
         gazebo,
         spawn_entity,
+        moveit_launch,
     ])

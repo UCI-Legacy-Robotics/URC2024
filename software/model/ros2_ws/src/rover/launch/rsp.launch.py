@@ -20,6 +20,9 @@ def generate_launch_description():
     xacro_file = os.path.join(pkg_path,'description','rover.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     
+    controller_config = os.path.join(pkg_path, 'config', 'controller_position.yaml')
+
+
     # Create a state publisher node
     params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
     node_robot_state_publisher = Node(
@@ -29,6 +32,14 @@ def generate_launch_description():
         parameters=[params]
     )
 
+    ros2_control_node = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        parameters=[{'robot_description': robot_description_config.toxml(),
+                     'use_sim_time': use_sim_time},
+                    controller_config],
+        output='screen'
+    )
 
     # Launch!
     return LaunchDescription([
@@ -37,5 +48,6 @@ def generate_launch_description():
             default_value='false',
             description='Use sim time if true'),
 
-        node_robot_state_publisher
+        node_robot_state_publisher,
+        ros2_control_node
     ])
